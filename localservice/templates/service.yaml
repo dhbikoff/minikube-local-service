@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+type: External
+metadata:
+  name: {{ include "localservice.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "localservice.name" . }}
+    helm.sh/chart: {{ include "localservice.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: {{ .Values.targetPort }}
+      protocol: TCP
