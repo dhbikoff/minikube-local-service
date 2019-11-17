@@ -5,8 +5,8 @@ function USAGE {
   echo "Flags:"
   echo "-h Ingress host"
   echo "-n Name for your helm package and url path part behind your ingress host - Default: \"default\""
-	echo "-p Target service host port - Default: 3000"
-	echo "-d Delete previously created helm package name, ex. ./deploy.sh -d default"
+  echo "-p Target service host port - Default: 3000"
+  echo "-d Delete previously created helm package name, ex. ./deploy.sh -d default"
   echo "Example: ./deploy.sh -n myservice -h myhost.dev -p 3001"
   exit 1
 }
