@@ -20,6 +20,7 @@ The k8s Nginx ingress controller redirects requests to your host service.
 You can attach as many services as you like, just use a different `path-part` and `host-port` for each.
 
 `$ ./deploy.sh -n myservice -h myhost.dev -p 3000`
+
 `$ ./deploy.sh -n myservice-ui -h myhost.dev -p 3001`
 
 ## Deleting a local service
